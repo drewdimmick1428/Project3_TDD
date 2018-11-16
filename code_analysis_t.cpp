@@ -51,7 +51,9 @@ int main() {
         // Rule #5
         assert(languageAnalysis(request) == request.option_language);
         
-        //
+        // Rule #6
+        request.disk_filename = "file.cpp";
+        assert(get_language_from_filename(request.disk_filename) == "C++");
     }
 
     return 0;
