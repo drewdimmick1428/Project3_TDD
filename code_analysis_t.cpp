@@ -29,9 +29,19 @@ int main() {
 									if (a &lt; b) a = b;
 									</code:unit>);*/
 		request.source_code = R"(if (a < b) a = b;)";
+        
+        // Rule #1
 		request.disk_filename  = "filename.cpp";
 		request.entry_filename = "entry.cpp";
 		assert(fileNameAnalysis(request) == request.entry_filename);
+        
+        // Rule #2
+        request.option_filename = "option.cpp";
+        assert(fileNameAnalysis(request) == request.option_filename);
+        
+        // Rule #3
+        request.disk_filename = "data";
+        assert(fileNameAnalysis(request) == request.disk_filename);
     }
 
     return 0;
