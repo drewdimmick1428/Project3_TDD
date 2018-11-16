@@ -54,6 +54,13 @@ int main() {
         // Rule #6
         request.disk_filename = "file.cpp";
         assert(get_language_from_filename(request.disk_filename) == "C++");
+        
+        // Rule #7
+        request.disk_filename = "-";
+        assert(fileNameAnalysis(request) == request.entry_filename);
+        request.entry_filename = "";
+        assert(fileNameAnalysis(request) == request.option_filename);
+        
     }
 
     return 0;

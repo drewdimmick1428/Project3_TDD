@@ -29,6 +29,12 @@ std::string formatAnalysisXML(const analysis_request& request) {
 }
 
 std::string fileNameAnalysis(const analysis_request& request) {
+    if(request.disk_filename == "-") {
+        if(request.entry_filename == "") {
+            return request.option_filename;
+        }
+        return request.entry_filename;
+    }
     if(request.disk_filename == "data" ) {
         return request.disk_filename;
     }
