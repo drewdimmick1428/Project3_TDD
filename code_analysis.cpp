@@ -49,3 +49,11 @@ std::string urlAnalysis(const analysis_request& request) {
     
     return request.source_url;
 }
+
+std::string languageAnalysis(const analysis_request& request) {
+    if(request.option_language != "") {
+        return request.option_language;
+    }
+    
+    return request.default_language;
+}

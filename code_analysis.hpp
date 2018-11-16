@@ -20,5 +20,6 @@
 std::string formatAnalysisXML(const analysis_request& request);
 std::string fileNameAnalysis(const analysis_request& request);
 std::string urlAnalysis(const analysis_request& request);
+std::string languageAnalysis(const analysis_request& request);
 
 #endif

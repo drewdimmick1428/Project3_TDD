@@ -21,7 +21,7 @@ int main() {
         request.source_url       = "";
         request.option_url      = "";
         request.option_language = "C++";
-        request.default_language = "";
+        request.default_language = "java";
         request.option_loc = -1;
 
         /*assert(formatAnalysisXML(request) =="(<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -47,6 +47,11 @@ int main() {
         request.source_url = "source";
         request.option_url = "optionUrl";
         assert(urlAnalysis(request) == request.option_url);
+        
+        // Rule #5
+        assert(languageAnalysis(request) == request.option_language);
+        
+        //
     }
 
     return 0;
