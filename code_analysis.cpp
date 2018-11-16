@@ -27,3 +27,11 @@ std::string formatAnalysisXML(const analysis_request& request) {
 
     return wrap.xml();
 }
+
+std::string fileNameAnalysis(const analysis_request& request) {
+	if(request.entry_filename == "") {
+		return request.disk_filename;
+	}
+
+	return request.entry_filename;
+}

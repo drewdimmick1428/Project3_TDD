@@ -18,5 +18,6 @@
  * @retval Empty string if invalid
  */
 std::string formatAnalysisXML(const analysis_request& request);
+std::string fileNameAnalysis(const analysis_request& request);
 
 #endif
