@@ -42,6 +42,11 @@ int main() {
         // Rule #3
         request.disk_filename = "data";
         assert(fileNameAnalysis(request) == request.disk_filename);
+        
+        // Rule #4
+        request.source_url = "source";
+        request.option_url = "optionUrl";
+        assert(urlAnalysis(request) == request.option_url);
     }
 
     return 0;

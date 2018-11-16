@@ -41,3 +41,11 @@ std::string fileNameAnalysis(const analysis_request& request) {
 
 	return request.entry_filename;
 }
+
+std::string urlAnalysis(const analysis_request& request) {
+    if(request.option_url != "") {
+        return request.option_url;
+    }
+    
+    return request.source_url;
+}
